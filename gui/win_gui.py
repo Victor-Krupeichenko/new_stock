@@ -76,6 +76,11 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.btn_update)
 
+        self.btn_all = QPushButton(self.frame)
+        self.btn_all.setObjectName(u"btn_all")
+
+        self.horizontalLayout_3.addWidget(self.btn_all)
+
 
         self.horizontalLayout_4.addLayout(self.horizontalLayout_3)
 
@@ -108,8 +113,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.tableWidget = QTableWidget(self.frame)
-        if (self.tableWidget.columnCount() < 6):
-            self.tableWidget.setColumnCount(6)
+        if (self.tableWidget.columnCount() < 7):
+            self.tableWidget.setColumnCount(7)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -122,6 +127,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         self.tableWidget.setObjectName(u"tableWidget")
 
         self.horizontalLayout_2.addWidget(self.tableWidget)
@@ -161,10 +168,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Stock", None))
-        self.label_title.setText(QCoreApplication.translate("MainWindow", u"Stock ver: 0.1", None))
+        self.label_title.setText(QCoreApplication.translate("MainWindow", u"Stock ver: 1.0", None))
         self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add", None))
         self.btn_remove.setText(QCoreApplication.translate("MainWindow", u"Remove", None))
         self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.btn_all.setText(QCoreApplication.translate("MainWindow", u"All", None))
         self.btn_search.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Title", None));
@@ -178,6 +186,8 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Price", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"State", None));
+        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"id", None));
         self.label_name.setText(QCoreApplication.translate("MainWindow", u"By Krupeichenko Victor", None))
     # retranslateUi
 

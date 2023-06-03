@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from PySide2 import QtCore
+
 ################################################################################
 ## Form generated from reading UI file 'update_form.ui'
 ##
@@ -11,19 +11,13 @@ from PySide2 import QtCore
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from datetime import datetime
-
-now = datetime.now()
-year = now.year
-month = now.month
-day = now.day
 
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(529, 453)
+        Dialog.resize(529, 244)
         self.verticalLayout = QVBoxLayout(Dialog)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -81,6 +75,7 @@ class Ui_Dialog(object):
         self.spinBox.setObjectName(u"spinBox")
         self.spinBox.setFont(font1)
         self.spinBox.setFocusPolicy(Qt.ClickFocus)
+        self.spinBox.setMaximum(1000000000)
 
         self.verticalLayout_2.addWidget(self.spinBox)
 
@@ -95,23 +90,10 @@ class Ui_Dialog(object):
         self.doubleSpinBox.setObjectName(u"doubleSpinBox")
         self.doubleSpinBox.setFont(font1)
         self.doubleSpinBox.setFocusPolicy(Qt.ClickFocus)
+        self.doubleSpinBox.setMaximum(9999999999999.990234375000000)
 
         self.verticalLayout_2.addWidget(self.doubleSpinBox)
 
-        self.label_date = QLabel(self.frame)
-        self.label_date.setObjectName(u"label_date")
-        self.label_date.setFont(font)
-        self.label_date.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_2.addWidget(self.label_date)
-
-        self.dateEdit = QDateEdit(self.frame)
-        self.dateEdit.setObjectName(u"dateEdit")
-        self.dateEdit.setFont(font1)
-        self.dateEdit.setFocusPolicy(Qt.ClickFocus)
-        self.dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(year, month, day)))
-
-        self.verticalLayout_2.addWidget(self.dateEdit)
 
         self.verticalLayout_3.addLayout(self.verticalLayout_2)
 
@@ -127,7 +109,7 @@ class Ui_Dialog(object):
         self.buttonBox.setObjectName(u"buttonBox")
         self.buttonBox.setFont(font1)
         self.buttonBox.setContextMenuPolicy(Qt.ActionsContextMenu)
-        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
 
         self.horizontalLayout.addWidget(self.buttonBox)
 
@@ -135,14 +117,16 @@ class Ui_Dialog(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer_2)
 
+
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
+
         self.verticalLayout.addWidget(self.frame)
+
 
         self.retranslateUi(Dialog)
 
         QMetaObject.connectSlotsByName(Dialog)
-
     # setupUi
 
     def retranslateUi(self, Dialog):
@@ -151,5 +135,5 @@ class Ui_Dialog(object):
         self.label_invent.setText(QCoreApplication.translate("Dialog", u"Inventary number(Update):", None))
         self.label_count.setText(QCoreApplication.translate("Dialog", u"Count(Update):", None))
         self.label_price.setText(QCoreApplication.translate("Dialog", u"Price(Update):", None))
-        self.label_date.setText(QCoreApplication.translate("Dialog", u"Date(Update):", None))
     # retranslateUi
+

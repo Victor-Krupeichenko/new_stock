@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'delete.ui'
+## Form generated from reading UI file 'delete_dialog.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -71,9 +71,6 @@ class Ui_Dialog(object):
 
         self.label_2 = QLabel(self.frame)
         self.label_2.setObjectName(u"label_2")
-        font1 = QFont()
-        font1.setPointSize(8)
-        self.label_2.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.label_2)
 
